@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BankCardTemplate</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="shortcut icon" href="./images/bank-card-svgrepo-com.svg" type="image/svg">
+</head>
+<body class="page">
+  <div class="card">
+    <form class="card__template card__main">
+      <label class="card__main-number">
+        <p class="card__text">Card Number</p>
+        <input
+          class="card__input card__input_purpose_number"
+          type="text"
+          name="card-number"
+          placeholder="Number"
+          maxlength="20"
+          id="card-number"
+        >
+      </label>
+      <label class="card__main-holder">
+        <p class="card__text">Holder</p>
+        <input
+          class="card__input card__input_purpose_holder"
+          type="text"
+          name="card-holder"
+          placeholder="Card Holder"
+          id="card-holder"
+        >
+      </label>
+      <div class="card__main-date">
+        <p class="card__text">Expires</p>
+        <div class="card__date">
+          <label>
+            <select class="card__select" name="card-month">
+              <option selected value="month" disabled>Month</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+          <label>
+            <select class="card__select" name="card-year">
+              <option selected value="year" disabled>Year</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </form>
+    <form class="card__template card__cvv">
+      <label class="card__cvv-label">
+        <input
+          class="card__input card__input_purpose_cvv"
+          type="password"
+          name="card-cvv"
+          placeholder="cvv"
+          maxlength="3"
+          id="cvv"
+        >
+      </label>
+    </form>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

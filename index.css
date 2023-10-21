@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+@keyframes draw {
+  from {
+    top: 0;
+  }
+  to {
+    top: 50px;
+  }
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #101010;
+}
+
+.card {
+  position: relative;
+  color: #fff;
+}
+
+.card__text {
+  margin: 0 0 10px;
+  opacity: .6;
+}
+
+.card__template {
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.card__main {
+  box-sizing: border-box;
+  background-color: #202020;
+  display: grid;
+  column-gap: 10px;
+  grid-template-areas: 
+    "number ."
+    "holder date"
+  ;
+  padding: 0 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.card__main-number {
+  grid-area: number;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__main-holder {
+  grid-area: holder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__main-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__input {
+  background-color: transparent;
+  padding: 5px;
+  border: none;
+  background-color: #353535;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.card__input::placeholder {
+  text-align: center;
+}
+
+.card__input_purpose_number {
+  width: 272px;
+}
+
+.card__input_purpose_holder {
+  max-width: 120px;
+}
+
+.card__input_purpose_cvv {
+  background-color: #202020;
+  width: 60px;
+}
+
+.card__select {
+  background-color: #353535;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.card__cvv {
+  position: absolute;
+  top: 50px;
+  background-color: #353535;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  /* transition: all 1s; */
+  /* transform: translateY(50px); */
+  animation: draw 1s;
+}
+
+.card__cvv-label {
+  margin-top: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card__template {
+    width: 370px;
+    height: 215px;
+    font-size: 18px;
+  }
+
+  .card__input {
+    font-size: 16px;
+  }
+
+  .card__select {
+    font-size: 16px;
+  }
+}
